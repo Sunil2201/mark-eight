@@ -19,6 +19,14 @@ body {
   margin-bottom: 2rem;
   height: 3.5rem;
 }
+.containerCenter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  justify-content: center;
+}
 input {
   border: none;
   font-size: 1.2rem;
@@ -29,4 +37,15 @@ input {
 }
 input:focus {
   outline: none;
+}
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
+a {
+  color: white;
+}
+footer h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
 }

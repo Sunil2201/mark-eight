@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import "./styles.css";
 
 const emojiDictionary = require("./data.json");
@@ -39,17 +40,19 @@ export default function App() {
         onChange={changeEventHandler}
       ></input>
       <h3>OR select any one from the list below</h3>
-      {emojis.map((emoji) => {
-        return (
-          <span
-            onClick={() => emojiClickHandler(emoji)}
-            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
-            key={emoji}
-          >
-            {emoji}
-          </span>
-        );
-      })}
+      <div className="containerCenter">
+        {emojis.map((emoji) => {
+          return (
+            <span
+              onClick={() => emojiClickHandler(emoji)}
+              style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+              key={emoji}
+            >
+              {emoji}
+            </span>
+          );
+        })}
+      </div>
       <footer>
         <h3>
           Developed with
@@ -58,6 +61,33 @@ export default function App() {
           </span>
           by Sunil Ballani
         </h3>
+        <li className="list-item-inline">
+          <a
+            className="link"
+            target="_blank"
+            href="https://github.com/Sunil2201"
+          >
+            <FaGithub size={30} />
+          </a>
+        </li>
+        <li className="list-item-inline">
+          <a
+            className="link"
+            target="_blank"
+            href="https://twitter.com/imsunilballani"
+          >
+            <FaTwitter size={30} />
+          </a>
+        </li>
+        <li className="list-item-inline">
+          <a
+            className="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/sunil-ballani-17b31b200/"
+          >
+            <FaLinkedin size={30} />
+          </a>
+        </li>
       </footer>
     </div>
   );
